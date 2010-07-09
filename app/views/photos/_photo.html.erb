@@ -9,7 +9,15 @@
         </span>
     </div>
     <% content_tag :div, :class => "tags" do %>
-        <div class="tags_label">Tags: (<%= link_to "Edit", new_photo_tag_url(photo), :class => "edit_tags"%>)</div>
+        <div class="tags_label">Tags: <%= link_to "(add a tag)", new_photo_tag_url(photo), :class => "edit_tags"%></div>
+        <div class='error_messages' style="display:none;"></div>
         <%= render :partial => photo.tags, :locals => {:photo => photo} %>
+        <div class="clearfix"></div>
+        <div class='add_tags' style="display:none;">
+            <% form_for Tag.new, :url => photo_tags_url(photo) do |f| -%>
+              <%= f.text_field :name -%><%= f.submit "Add" %>
+            <% end -%>
+            <span class="tip">Separate each tag with a space: cameraphone urban moblog. Or to join 2 words together in one tag, use double quotes: "daily commute".</span>
+        </div>
     <% end -%>
 <% end -%>

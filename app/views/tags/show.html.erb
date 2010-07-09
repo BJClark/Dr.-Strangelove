@@ -1,7 +1,4 @@
-<p>
-  <strong>Name:</strong><%=h @tag.name %>
-</p>
-
-<%= link_to 'Edit', edit_object_url %>
-|
-<%= link_to 'Back', collection_url %>
+<div class="collection_of_photos">
+    <h1>Photos tagged with <%= @tag.name %></h1>
+    <%= render :partial => "photos/photo", :collection => @tag.photos, :spacer_template => "photos/photo_spacer" %>
+</div>

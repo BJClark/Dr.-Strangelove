@@ -40,6 +40,13 @@ body {
 	float: left;
 	padding-right: 10px;
 }
+.error_messages {
+	padding: 10px 5px 5px 60px;
+	background: url(../images/alert_48x48.png) no-repeat;
+	border: 1px dashed red;
+	min-height: 40px;
+	color: red;
+}
 
 
 /* Tags */
@@ -48,6 +55,9 @@ body {
 }
 .tags_label {
 	border-bottom: 1px solid gray;
+}
+.tags .error_messages {
+	margin-top: 10px;
 }
 .editable_tag {
 	padding: 5px 10px;
@@ -72,4 +82,15 @@ body {
 }
 .editable_tag form, .editable_tag div {
 	display: inline;
+}
+div.add_tags {
+	margin-top: 10px;
+}
+.add_tags input[type=text] {
+	width: 400px;
+	margin-right: 20px;
+}
+.add_tags .tip {
+	font-size: 0.8em;
+	color: gray;
 }

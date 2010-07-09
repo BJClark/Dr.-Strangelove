@@ -2,7 +2,7 @@
 
 <%= error_messages_for :tag %>
 
-<% form_for(:tag, :url => collection_url) do |f| %>
+<% form_for(:tag, :url => photo_tags_url(params[:photo_id])) do |f| %>
   <%= render :partial => "form", :locals => { :f => f } %>
   <p>
     <%= submit_tag "Create" %>
