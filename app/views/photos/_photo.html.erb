@@ -9,6 +9,7 @@
         </span>
     </div>
     <% content_tag :div, :class => "tags" do %>
-        <%= render :partial => photo.tags %>
+        <div class="tags_label">Tags: (<%= link_to "Edit", new_photo_tag_url(photo), :class => "edit_tags"%>)</div>
+        <%= render :partial => photo.tags, :locals => {:photo => photo} %>
     <% end -%>
 <% end -%>

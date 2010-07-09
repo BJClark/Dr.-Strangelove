@@ -1,0 +1,75 @@
+/* @override http://strangelove.local/stylesheets/application.css?1278647010 */
+
+/* General Style */
+body {
+	font-family: Helvetica, Arial, sans-serif;
+}
+#logo {
+	background: url(../images/logo.png) no-repeat;
+	text-indent: -9999px;
+	height: 55px;
+	margin-bottom: 5px;
+}
+#header {
+	border-bottom: 1px solid gray;
+	margin-bottom: 30px;
+}
+
+.single_photo img.photo {
+	width: 590px;
+}
+
+/* Photo Navigation */
+.photo_navigation h5 {
+	margin-bottom: 27px;
+	border-bottom: 1px solid gray;
+}
+.photo_navigation img {
+	width: 80px;
+	height: 80px;
+}
+.photo_navigation div.empty_photo{
+	width: 60px;
+	height: 60px;
+	padding: 10px;
+	background: silver;
+	color: white;
+	font-size: .8em;
+}
+.photo_navigation img, .photo_navigation div.empty_photo {
+	float: left;
+	padding-right: 10px;
+}
+
+
+/* Tags */
+.tags {
+	margin-top: 20px;
+}
+.tags_label {
+	border-bottom: 1px solid gray;
+}
+.editable_tag {
+	padding: 5px 10px;
+	margin: 5px 10px 0 0;
+	background: silver;
+	display: block;
+	float: left;
+	background: #d6d6d6;
+	background: -webkit-gradient(linear, left top, left bottom, from(#bfbfbf), to(#e4e4e4));
+	background: -moz-linear-gradient(top, #bfbfbf, #e4e4e4);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	box-shadow: rgba(0,0,0,1) 0 1px 0;
+}
+.editable_tag a {
+	color: black;
+	margin-right: 5px;
+}
+.editable_tag a.destroy_tag {
+	text-decoration: none;
+}
+.editable_tag form, .editable_tag div {
+	display: inline;
+}

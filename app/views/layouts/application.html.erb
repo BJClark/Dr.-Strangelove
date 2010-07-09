@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Photor</title>
+	<meta name="author" content="BJ Clark">
+	<!-- Date: 2010-07-08 -->
+	<%= stylesheet_link_tag "reset", "text", "960_24_col", :cache => :true %>
+	<%= stylesheet_link_tag "application" %>
+</head>
+<body>
+    <div class="container_24">
+        <div id="header">
+            <h1 id="logo">Photor</h1>
+        </div>
+        <div id="content">
+            <%= yield %>
+        </div>
+    </div>
+</body>
+</html>
