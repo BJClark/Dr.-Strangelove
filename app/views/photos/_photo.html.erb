@@ -1,0 +1,14 @@
+<% div_for photo, :class => "hmedia" do %>
+    <%= content_tag :h2, photo.title, :class => "fn" %>
+    <a rel="enclosure" type="image/jpeg" href="<%= url_for photo -%>">
+        <%= image_tag "strangelove.jpg", :alt => "Dr. Strangelove", :class => "photo" %>
+    </a> 
+    <div class="attribution">
+        by <span class="contributor vcard">
+            <%= link_to photo.user, "http://example.com", :class => "url fn" %>
+        </span>
+    </div>
+    <% content_tag :div, :class => "tags" do %>
+        <%= render :partial => photo.tags %>
+    <% end -%>
+<% end -%>

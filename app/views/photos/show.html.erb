@@ -1,4 +1,9 @@
-
-<%= link_to 'Edit', edit_object_url %>
-|
-<%= link_to 'Back', collection_url %>
+<div class="single_photo">
+    <%= render :partial => "photo", :object => @photo %>
+    <div class="photo_sidebar">
+        <div class="photo_navigation">
+            <h5>More Photos</h5>
+            <%= photo_navigation @photo %>
+        </div>
+    </div>
+</div>

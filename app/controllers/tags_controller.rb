@@ -1,3 +1,2 @@
-class TagsController < ResourceController::Base
-  belongs_to :photo
+class TagsController < ResourceController::Singleton
 end
