@@ -3,10 +3,9 @@
 <%= error_messages_for :tag %>
 
 <% form_for(:tag, :url => photo_tags_url(params[:photo_id])) do |f| %>
-  <%= render :partial => "form", :locals => { :f => f } %>
+  <%= render :partial => "form", :locals => { :f => f, :photo => Photo.find(params[:photo_id]) } %>
   <p>
     <%= submit_tag "Create" %>
   </p>
 <% end %>
 <br/>
-<%= link_to 'Back', collection_url %>

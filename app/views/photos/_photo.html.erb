@@ -15,9 +15,8 @@
         <div class="clearfix"></div>
         <div class='add_tags' style="display:none;">
             <% form_for Tag.new, :url => photo_tags_url(photo), :html => {:id => ("new_tag_" + dom_id(photo))} do |f| -%>
-              <%= f.text_field :name, :id => ("tag_name_" + dom_id(photo)) -%><%= f.submit "Add", :id => ("submit_tag_" + dom_id(photo)) %>
+              <%= render :partial => "tags/form", :locals => {:f => f, :photo => photo} %>
             <% end -%>
-            <span class="tip">Separate each tag with a space: cameraphone urban moblog. Or to join 2 words together in one tag, use double quotes: "daily commute".</span>
         </div>
     <% end -%>
 <% end -%>

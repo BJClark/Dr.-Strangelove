@@ -1,4 +1,2 @@
-<p>
-  <label for="tag_name">Name:</label>
-  <%= f.text_field :name %>
-</p>
+<%= f.text_field :name, :id => ("tag_name_" + dom_id(photo)) -%><%= f.submit "Add", :id => ("submit_tag_" + dom_id(photo)) %>
+  <div class="tip">Separate each tag with a space: cameraphone urban moblog. Or to join 2 words together in one tag, use double quotes: "daily commute".</div>
