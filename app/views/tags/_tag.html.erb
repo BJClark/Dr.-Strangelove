@@ -1,1 +1,1 @@
-<div class="editable_tag" id="<%= dom_id tag -%>"><%= link_to tag.name, tag_url(tag), :class => "tag", :rel => "tag" -%><%= link_to("x", photo_tag_url(photo, tag, :_method => :delete), :class => "destroy_tag", :rel => "no-follow") %></div>
+<div class="editable_tag" <%= link_to tag.name, tag_url(tag), :class => "tag", :rel => "tag" -%><%= link_to("x", photo_tag_url(photo, tag, :_method => :delete), :class => "destroy_tag", :rel => "no-follow") %></div>
